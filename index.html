@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversion tools website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form>
+        <h1>Temperature Conversion</h1>
+        <input type="number" id="textBox" value="0"><br>
+
+        <input type="radio" id="toFhr" name="unit">
+        <label for="toFhr">Celsius ➡ Fhr</label><br>
+
+        <input type="radio" id="toCls" name="unit">
+        <label for="toCls">Fhr ➡ Celsius</label><br>
+
+        <button type="button" onclick="convert()">Submit</button><br>
+        <p id="result"></p>
+    </form>
+
+    <form>
+        <h1>Kilometers to Miles Calculator</h1>
+        <input type="number" id="textBox2" value="1"><br>
+
+        <input type="radio" id="toMiles" name="unit">
+        <label for="toMiles">Kilometers ➡ Miles</label><br>
+
+        <input type="radio" id="toKm" name="unit">
+        <label for="toKm">Miles ➡ Kilometers</label><br>
+
+        <button type="button" onclick="convert2()">Calculate</button><br>
+        <p id="result2"></p>
+    </form>
+
+    <script src="coding.js"></script>
+</body>
+</html>
