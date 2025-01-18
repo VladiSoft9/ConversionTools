@@ -11,9 +11,13 @@ const textBox3 = document.getElementById('textBox3')
 const toKG = document.getElementById('toKG')
 const toIB = document.getElementById('toIB')
 const result3 = document.getElementById('result3')
+const sidebar = document.getElementById('sidebar')
+const links = document.querySelectorAll('a')
 let temp
 let distance
 let weight
+
+// Function for temperature conversion
 
 function convert(){
 
@@ -36,6 +40,7 @@ function convert(){
     }
 }
 
+// Function for distance conversion
 
 function convert2(){
 
@@ -55,6 +60,8 @@ function convert2(){
         result2.textContent = 'Please check desired converting option!'
     }
 }
+
+// Function for weight conversion
 
 function convert3(){
 
@@ -76,3 +83,10 @@ function convert3(){
         result3.textContent = 'Please check desired converting option'
     }
 }
+
+
+// Function for opening and closing the sidebar
+function ToggleSideBar(){
+    sidebar.classList.toggle('close');
+}
+

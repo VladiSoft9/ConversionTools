@@ -16,26 +16,26 @@
                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-200 240-440l56-56 184 183 184-183 56 56-240 240Zm0-240L240-680l56-56 184 183 184-183 56 56-240 240Z"/></svg>
                 </button>
             </li>
-            <li class="active">
-                <a href="index.html" class="navBtn">
+            <li>
+                <a href="index.html">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
                     <span>Home</span>
                 </a>
             </li>
-            <li>
-                <a href="temperature.html" class="navBtn">
+            <li class="active">
+                <a href="temperature.html">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-80q-83 0-141.5-58.5T280-280q0-48 21-89.5t59-70.5v-320q0-50 35-85t85-35q50 0 85 35t35 85v320q38 29 59 70.5t21 89.5q0 83-58.5 141.5T480-80Zm-40-440h80v-40h-40v-40h40v-80h-40v-40h40v-40q0-17-11.5-28.5T480-800q-17 0-28.5 11.5T440-760v240Z"/></svg>
                     <span>Temperature</span>
                 </a>
             </li>
             <li>
-                <a href="distance.html" class="navBtn">
+                <a href="distance.html">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-80q-106 0-173-33.5T240-200q0-24 14.5-44.5T295-280l63 59q-9 4-19.5 9T322-200q13 16 60 28t98 12q51 0 98.5-12t60.5-28q-7-8-18-13t-21-9l62-60q28 16 43 36.5t15 45.5q0 53-67 86.5T480-80Zm1-220q99-73 149-146.5T680-594q0-102-65-154t-135-52q-70 0-135 52t-65 154q0 67 49 139.5T481-300Zm-1 100Q339-304 269.5-402T200-594q0-71 25.5-124.5T291-808q40-36 90-54t99-18q49 0 99 18t90 54q40 36 65.5 89.5T760-594q0 94-69.5 192T480-200Zm0-320q33 0 56.5-23.5T560-600q0-33-23.5-56.5T480-680q-33 0-56.5 23.5T400-600q0 33 23.5 56.5T480-520Zm0-80Z"/></svg>
                     <span>Distance</span>
                 </a>
             </li>
             <li>
-                <a href="weight.html" class="navBtn">
+                <a href="weight.html">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M240-200h480l-57-400H297l-57 400Zm240-480q17 0 28.5-11.5T520-720q0-17-11.5-28.5T480-760q-17 0-28.5 11.5T440-720q0 17 11.5 28.5T480-680Zm113 0h70q30 0 52 20t27 49l57 400q5 36-18.5 63.5T720-120H240q-37 0-60.5-27.5T161-211l57-400q5-29 27-49t52-20h70q-3-10-5-19.5t-2-20.5q0-50 35-85t85-35q50 0 85 35t35 85q0 11-2 20.5t-5 19.5ZM240-200h480-480Z"/></svg>
                     <span>Weight</span>
                 </a>
@@ -44,18 +44,22 @@
 
     </nav>
 
-    <main class="index">
+    <main>
 
-        <div class="custom-tooltip-container">
-          <button class="custom-tooltip-btn">Hover me</button>
-          <div class="custom-tooltip-content">
-            <span class="custom-tooltip-arrow"></span>
-            <p class="custom-tooltip-text">
-              Welcome! Please choose which tool you would like to use!
-            </p>
-          </div>
-        </div>
-        
+        <form>
+            <h1>Temperature Conversion</h1>
+            <input type="number" id="textBox" value="0"><br>
+
+            <input type="radio" id="toFhr" name="unit">
+            <label for="toFhr">Celsius ➡ Fhr</label><br>
+
+            <input type="radio" id="toCls" name="unit">
+            <label for="toCls">Fhr ➡ Celsius</label><br>
+
+            <button type="button" onclick="convert()">Submit</button><br>
+            <p id="result"></p>
+        </form>
+
     </main>
 
     <script src="coding.js"></script>
